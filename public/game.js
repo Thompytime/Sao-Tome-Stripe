@@ -133,7 +133,7 @@ document.addEventListener('DOMContentLoaded', () => {
     let gameOver = false;
     const maxDistanceKm = 150;
 
-    countyImage.src = 'images SAO/' + countyImages[currentCountyIndex];
+    countyImage.src = '/images SAO/' + countyImages[currentCountyIndex];
     attemptsLeftElement.textContent = `Attempts left: ${attemptsLeft}`;
 
     // Add error handling for image loading
@@ -301,7 +301,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const arrowFileName = directionToArrow[direction] || "North";
 
                 const arrowImage = document.createElement('img');
-                arrowImage.src = `images/Arrow ${arrowFileName}.svg`;
+                arrowImage.src = `/images/Arrow ${arrowFileName}.svg`;
                 arrowImage.alt = `Direction: ${direction}`;
                 arrowImage.classList.add('direction-arrow');
                 arrowImage.onerror = () => {
@@ -369,7 +369,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         currentCountyIndex = Math.floor(Math.random() * countyImages.length);
         correctAnswer = imageNameMap[countyImages[currentCountyIndex].replace('.svg', '')];
-        countyImage.src = 'images SAO/' + countyImages[currentCountyIndex];
+        countyImage.src = '/images SAO/' + countyImages[currentCountyIndex];
 
         guessInput.disabled = false;
         submitGuessButton.disabled = false;
