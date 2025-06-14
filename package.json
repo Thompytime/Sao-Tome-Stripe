@@ -1,0 +1,6 @@
+{
+  "description": "",
+  "dependencies": {
+    "stripe": "^18.2.1"
+  }
+}
