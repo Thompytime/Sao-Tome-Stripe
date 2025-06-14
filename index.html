@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Your Place!</title>
+    <link rel="stylesheet" href="/styles.css">
+    <link rel="icon" href="/images/KYP.jpg" type="image/x-icon">
+</head>
+<body>
+    <div class="start-screen" id="start-screen">
+        <p>To play 'Know Your Place' press play</p>
+        <img src="/images/KYP.jpg" alt="Pre-game Image">
+        <button id="play-button">Play</button>
+    </div>
+
+    <div class="game-container" id="game-container" style="display: none;">
+        <h1>Know Your Place!</h1>
+        <h2>São Tomé and Príncipe - Districts</h2>
+        <h3>The desired district is in Red.</h3>
+        <div class="game-board">
+            <img id="county-image" src="/images SAO/Água Grande_District.svg" alt="County Image">
+            <div class="correct-answer"></div>
+            <div class="guess-container">
+                <input type="text" id="guess-input" placeholder="Guess the district...">
+                <div id="dropdown-options" class="dropdown"></div>
+                <button id="submit-guess">Submit</button>
+            </div>
+            <div id="feedback"></div>
+            <div id="attempts-left-container">
+                <div id="attempts-left">Attempts left: 5</div>
+                <!-- Your rows of guesses/distance -->
+                <!-- ... (unchanged) ... -->
+            </div>
+            <button id="reload-button">Reload Game</button>
+        </div>
+    </div>
+
+    <script src="/game.js"></script>
+    <script src="https://js.stripe.com/v3/"></script>
+</body>
+</html>
